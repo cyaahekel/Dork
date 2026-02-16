@@ -1,0 +1,15 @@
+local games = {
+    [121864768012064] = "https://raw.githubusercontent.com/hajirblxhub/allsc/refs/heads/main/fishit",
+    [131623223084840] = "https://raw.githubusercontent.com/hajirblxhub/allsc/refs/heads/main/ETFB.txt",
+    [124311897657957] = "https://raw.githubusercontent.com/hajirblxhub/allsc/refs/heads/main/Balb.txt", 
+    [79546208627805] = "https://raw.githubusercontent.com/hajirblxhub/allsc/refs/heads/main/Balb.txt", 
+}
+
+local currentID = game.PlaceId
+local scriptURL = games[currentID]
+
+if scriptURL then
+    loadstring(game:HttpGet(scriptURL))()
+else
+    game.Players.LocalPlayer:Kick("\n[Akses Ditolak]\nGame ini belum terdaftar dalam database kami.\nSilahkan hubungi admin di Discord untuk informasi lebih lanjut.")
+end
